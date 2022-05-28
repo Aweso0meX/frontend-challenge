@@ -1,0 +1,37 @@
+@import '../../scss/variables';
+
+.wrapper {
+	max-width: 1360px;
+	margin: 48px auto;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	animation: pageA 0.5s 1 linear;
+	text-align: center;
+	padding: 0 20px;
+}
+.loadingText {
+	text-align: center;
+	font-size: 4rem;
+}
+.loadingWrapper {
+	height: 70vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@keyframes pageA {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@include wide() {
+	.loadingText {
+		font-size: 2rem;
+	}
+}

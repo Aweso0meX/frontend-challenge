@@ -1,0 +1,85 @@
+@import '../../../scss/variables';
+.item {
+	position: relative;
+	width: 17%;
+	height: 225px;
+	cursor: pointer;
+	transition: 0.5s linear;
+	margin-bottom: 48px;
+	animation: itemA 0.5s 1 linear;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	&:hover {
+		transform: scale(1.1);
+		box-shadow: 0 9px 18px 0 rgba(0, 0, 0, 0.4);
+	}
+	&:hover .hearth {
+		display: block;
+	}
+}
+
+.hearth {
+	color: red;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	font-size: 3rem;
+	display: none;
+	animation: hearthA 0.5s 1 linear;
+}
+.hoveredHearth {
+	color: red;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+	font-size: 3rem;
+	display: none;
+	animation: hearthA 0.5s 1 linear;
+}
+.hearthWrapper:hover .hoveredHearth {
+	display: block;
+}
+
+@keyframes hearthA {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes itemA {
+	0% {
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@include wide() {
+	//1200px ++
+	.item {
+		width: 30%;
+	}
+}
+
+@include desktop() {
+	// 992px++
+	.item {
+		width: 48%;
+	}
+}
+
+@include mobile() {
+	// 568px++
+	.item {
+		width: 100%;
+	}
+}

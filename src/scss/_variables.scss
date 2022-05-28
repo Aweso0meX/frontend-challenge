@@ -2,13 +2,15 @@ $accent: #398dc0;
 $accent-light: #59a7d8;
 $accent-dark: #2c719c;
 
+$accent-background: #2196f3;
+
 $text: #000;
 
-$regular-text: 16px;
+$regular-text: 14px;
 $small-text: 14px;
 $lineheight: 1.75;
-$userfont: raleway-wt, sans-serif;
-$transition: 0.25s ease-out;
+$userfont: 'Roboto', sans-serif;
+$transition: 0.2s linear;
 $index: calc(1vw + 1vh);
 $radius: 5px;
 $radius-style: 0 7px;
@@ -22,42 +24,42 @@ $breakpoint_mobile: 568px;
 $breakpoint_mobile-s: 414px;
 
 @mixin hd() {
-	@media (max-width: $breakpoint_hd) {
+	@media screen and (max-width: $breakpoint_hd) {
 		//1440px ++
 		@content;
 	}
 }
 
 @mixin wide() {
-	@media (max-width: $breakpoint_wide) {
+	@media screen and (max-width: $breakpoint_wide) {
 		//1200px ++
 		@content;
 	}
 }
 
 @mixin desktop() {
-	@media (max-width: $breakpoint_desktop) {
+	@media screen and (max-width: $breakpoint_desktop) {
 		//992px ++
 		@content;
 	}
 }
 
 @mixin tablet() {
-	@media (max-width: $breakpoint_tablet) {
+	@media screen and (max-width: $breakpoint_tablet) {
 		//768px ++
 		@content;
 	}
 }
 
 @mixin mobile() {
-	@media (max-width: $breakpoint_mobile) {
+	@media screen and (max-width: $breakpoint_mobile) {
 		//568px ++
 		@content;
 	}
 }
 
 @mixin mobile-s() {
-	@media (max-width: $breakpoint_mobile-s) {
+	@media screen and (max-width: $breakpoint_mobile-s) {
 		//414px ++
 		@content;
 	}

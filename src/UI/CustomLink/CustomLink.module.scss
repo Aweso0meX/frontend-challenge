@@ -1,0 +1,25 @@
+@import '../../scss/variables';
+.link {
+	color: rgba(255, 255, 255, 0.7);
+	text-decoration: none;
+	transition: $transition;
+}
+.link:hover {
+	color: #fff;
+}
+
+.linkActive {
+	color: #fff;
+}
+.linkWrapper {
+	background-color: #1e88e5;
+	transition: $transition;
+}
+
+@include mobile() {
+	// 568px++
+	.link {
+		width: 50%;
+		text-align: center;
+	}
+}
